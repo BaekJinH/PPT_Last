@@ -15,156 +15,15 @@ let main = gsap.timeline({
     }
 });
 
-
-// 텍스트 깜빡임 효과
-const content = "방문해주셔서 감사합니다."
-
-const text = document.querySelector('.typingText');
-let index = 0 ;
-
-function sleep (delay) {
-    const start = new Data(). getTime();
-    while (new Data ().getTime() < start + delay);
-}
-
-function typing() {
-    text.textContent += content[index++];
-    if(index > content.length) {
-        text.textContent = '';
-        index = 0;
-        sleep (3000)
-    }
-}
-
-setInterval (typing , 400)
-
-
-// 텍스트 깜빡임 2
-let target = document.querySelector('.typingText');
-
-function randomString () {
-    let stringArr = []
-}
-
-$(window).scroll(function () {
-    var scrollValue = $(this).scrollTop();
-
-    if (scrollValue > $('#section08').offset().top) {
-        // $('.fa-snowflake').css({display:'none'})
-    }
-})
-
-// hambuger menu
-$('.btnWrap').click(function(){
-    $('.hambuger').toggleClass('active');
-    $('nav').toggleClass('active');
-    $(this).stop().css({zIndex:15})
-})
-
-
-const hambug = document.getElementsByClassName('hambuger')[0]
-
-function hambugerColor () {
-
-}
-
-
-
-// skill 스크립트
-
-let number =  document.getElementById('number1');
-let counter = 0;
-setInterval(() => {
-    if(counter == 75) {
-        clearInterval () ;
-    }
-    else {
-        counter += 1;
-        number.innerHTML = counter + '%';    
-    }
-}, 30) ;
-
-
-let number2 =  document.getElementById('number2');
-let counter2 = 0;
-setInterval(() => {
-    if(counter2 == 70) {
-        clearInterval () ;
-    }
-    else {
-        counter2 += 1;
-        number2.innerHTML = counter2 + '%';    
-    }
-}, 30) ;
-
-
-let number3 =  document.getElementById('number3');
-let counter3 = 0;
-setInterval(() => {
-    if(counter3 == 95) {
-        clearInterval () ;
-    }
-    else {
-        counter3 += 1;
-        number3.innerHTML = counter3 + '%';    
-    }
-}, 30) ;
-
-
-let number4 =  document.getElementById('number4');
-let counter4 = 0;
-setInterval(() => {
-    if(counter4 == 60) {
-        clearInterval () ;
-    }
-    else {
-        counter4 += 1;
-        number4.innerHTML = counter4 + '%';    
-    }
-}, 30) ;
-
-
-let number5 =  document.getElementById('number5');
-let counter5 = 0;
-setInterval(() => {
-    if(counter5 == 70) {
-        clearInterval () ;
-    }
-    else {
-        counter5 += 1;
-        number5.innerHTML = counter5 + '%';    
-    }
-}, 30) ;
-
-
-let number6 =  document.getElementById('number6');
-let counter6 = 0;
-setInterval(() => {
-    if(counter6 == 55) {
-        clearInterval () ;
-    }
-    else {
-        counter6 += 1;
-        number6.innerHTML = counter6 + '%';    
-    }
-}, 30) ;
-
-
-let number7 =  document.getElementById('number7');
-let counter7 = 0;
-setInterval(() => {
-    if(counter7 == 60) {
-        clearInterval () ;
-    }
-    else {
-        counter7 += 1;
-        number7.innerHTML = counter7 + '%';    
-    }
-}, 30) ;
-
-
-
-
+// //메인에서 해 트리거
+// main.to(".sun", {
+//     scrollTrigger: {
+//         trigger: ".sun",
+//         start: "bottom center",
+//         scrub: 2,
+//     },
+// y: 600, duration: 2,
+// }); 
 
 
 // //스크롤 탑 값
@@ -287,6 +146,40 @@ function random(min, max) {
 
 
 
+// for (var i = 0; i < 20; i++) {  //물방울 수
+//     var bubble = document.createElement('div');
+//     bubble.className = 'bubble';
+//     var set = Math.random() * 30 + 10 + 'px';   //랜덤 픽셀값
+
+//     bubble.style.width = set;
+//     bubble.style.height = set;
+//     bubble.style.bottom = Math.random() * 4000 + 'px';
+//     bubble.style.left = Math.random() * document.querySelector("#contents").offsetWidth + 'px';
+
+//     document.querySelector("#contents").appendChild(bubble);
+
+//     Animate(bubble)
+// }
+
+// // 물방울 애니메이션
+// function Animate(set) {
+//     $(set).animate({
+//         bottom: document.querySelector("#contents").offsetHeight + 'px',
+//         left: '+=' + ((Math.random() * 100) - 50) + 'px'
+//     }, Math.random() * 12000 + 5000, 'linear', function() {
+//         set.style.bottom = '0px';
+//         Animate(set)
+//     });
+// }
+// 물방울
+
+// const modal = document.querySelector('.modalWrap');
+// const standard = document.getElementById('standard');
+
+// standard.addEventListener('click', function(){
+//     modal.classList.add('view');
+// })
+
 
 const modal = document.querySelector("#modal");
 const modalWrap = document.querySelector(".modalWrap");
@@ -299,8 +192,9 @@ const date = document.querySelector(".date");
 
 //모달에 출력되어야할 값들의 배열
 const modalInfo = [{
-    url: "https://baekjinh.github.io/project_1/",
+    url: "https://seol1059.github.io/project1/",
     bg:"background-image: url('./assets/img/1.png')",
+    // cover:"url('../img/1.png')",
     client: "STUDY",
     description: "WEB PROP SHOP SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -309,6 +203,7 @@ const modalInfo = [{
 {
     url: "https://seol1059.github.io/No.2/",
     bg:"background-image: url('./assets/img/2.png')",
+    // cover:"url('../assets/img/2.png')",
     client: "STUDY",
     description: "WEB CITY POP SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -317,6 +212,7 @@ const modalInfo = [{
 {
     url: "https://seol1059.github.io/No.3/",
     bg:"background-image: url('./assets/img/3.png')",
+    // cover:"url('../assets/img/3.png')",
     client: "STUDY",
     description: "GRAPHIC ARTWORK SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -325,6 +221,7 @@ const modalInfo = [{
 {
     url: "https://tuesdayy96.github.io/team_project/",
     bg:"background-image: url('./assets/img/6.png')",
+    // cover:"url('../assets/img/6.png')",
     client: "STUDY",
     description: "KOREAN AIR SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -333,6 +230,7 @@ const modalInfo = [{
 {
     url: "https://seol1059.github.io/No.4/",
     bg:"background-image: url('./assets/img/4.png')",
+    // cover:"url('../assets/img/4.png')",
     client: "STUDY",
     description: "LA CASA DE PAPEL SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -341,6 +239,7 @@ const modalInfo = [{
 {
     url: "https://seol1059.github.io/No.5/",
     bg:"background-image: url('./assets/img/5.png')",
+    // cover:"url('../assets/img/5.png')",
     client: "STUDY",
     description: "BINGGRAE SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY",
@@ -349,6 +248,7 @@ const modalInfo = [{
 {
     url: "https://seol1059.github.io/Millie/",
     bg:"background-image: url('./assets/img/7.png')",
+    // cover:"url('../assets/img/7.png')",
     client: "STUDY",
     description: "Millie SITE",
     role: "HTML, CSS, JAVASCRIPT, JQUERY , AJAX",
@@ -362,10 +262,12 @@ const modalInfo = [{
 //     date: "2022.08"
 // },
 {
-    url: "https:",
+    url: "https://seol1059.github.io/No.6/",
+    bg:"background-image: url('./assets/img/i.png')",
+    // cover:"url('../assets/img/i.png')",
     client: "STUDY",
     description: "PORTFOLIO_DESIGN SITE",
-    role: "PHOTOSHOP , ILLUSTRATION , PREMIEREPRO",
+    role: "PHOTOSHOP , ILLUSTRATION , PREMIERE PRO , AFTER EFFECTS",
     date: "-"
 }
 ]
@@ -476,7 +378,7 @@ const nav = document.querySelectorAll(".nav");
 const activeCont = [0, 5700, 10900, 31550, 34000];
 let flag = true;
 console.log(list)
-var bgm = new Audio("./assets/bgm/wish.mp3");
+var bgm = new Audio("./assets/bgm/Like_a_dream.mp3");
     bgm.volume = 0.3;
     bgm.addEventListener('ended', function() {
         this.currentTime = 0;
@@ -583,4 +485,3 @@ var HEIGHT,WIDTH;
     }
     
     window.requestAnimationFrame(AnimateBaseFrequency);
-
