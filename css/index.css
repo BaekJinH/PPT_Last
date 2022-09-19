@@ -176,7 +176,7 @@ nav > ul > li a:hover:after {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  background: rgba(0, 0, 0, .4);
+  /* background: rgba(0, 0, 0, .4); */
   color: #fff;
   height: 40px;
   line-height: 40px;
@@ -389,7 +389,7 @@ li.active .band {
   width: 100%;
   top: 0;
   bottom: 0;
-  background: rgba(3, 3, 3, 0.9);
+  /* background: rgba(3, 3, 3, 0.9); */
   transform-origin: 50% 0;
   transform: rotate(0);
   transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955) 0ms;
@@ -419,7 +419,7 @@ li.active .band {
 
 
 .bg {
-  background: black;
+  /* background: black; */
   /* background: linear-gradient(rgb(142 141 214), rgb(93 107 242), rgb(68 35 255)); */
   width: 100%;
   height: 3500px;
@@ -428,7 +428,7 @@ li.active .band {
 }
 
 .bg2 {
-  background: black;
+  /* background: black; */
   /* background: linear-gradient(rgb(93 107 242), rgb(93 107 242), rgb(52 78 233 / 73%)); */
   width: 100%;
   height: 100vh;
@@ -436,7 +436,7 @@ li.active .band {
 }
 
 .bg3 {
-  background: black;
+  /* background: black; */
   /* background: linear-gradient(180deg, rgb(93, 107, 242) 0%, rgb(93 107 242) 34%, rgb(144 141 211) 68%, rgb(93 107 242) 100%); */
   width: 100%;
   height: 10000px;
@@ -448,7 +448,7 @@ li.active .band {
 #main {
   height: 100vh;
   overflow: hidden;
-  background: black;
+  /* background: black; */
   /* background: #d9e5fa; */
   position: relative;
 }
